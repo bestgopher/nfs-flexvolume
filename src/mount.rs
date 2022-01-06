@@ -24,7 +24,7 @@ fn default_protocol() -> String {
 
 impl Opt {
     fn check(&self) -> Result<(), String> {
-        if self.protocol != *"tcp" || self.protocol != *"udp" {
+        if self.protocol != *"tcp" && self.protocol != *"udp" {
             return Err(format!("invalid protocol: {}", self.protocol));
         }
 
