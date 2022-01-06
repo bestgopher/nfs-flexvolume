@@ -1,7 +1,7 @@
 use std::process::Command;
 
 pub fn umount(args: &[String]) -> Result<(), String> {
-    let path = args.get(1).ok_or_else(|| "can't find umount path".to_string())?;
+    let path = args.get(2).ok_or_else(|| "can't find umount path".to_string())?;
     _unmount(path)
 }
 
