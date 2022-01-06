@@ -54,7 +54,8 @@ impl Opt {
 
     fn build_mount_command(&self, mount_path: &str) -> Command {
         let mut c = Command::new("mount");
-        c.arg("-t nfs")
+        c.arg("-t")
+            .arg("nfs")
             .arg(format!("-o{}", self.build_nfs_opt()))
             .arg(format!("{}:{}", self.server, self.path))
             .arg(mount_path);

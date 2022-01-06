@@ -4,7 +4,8 @@ use std::process::Command;
 pub fn is_mounted(mount_path: &str) -> bool {
     match Command::new("findmnt")
         .arg(mount_path)
-        .arg("--output TARGET")
+        .arg("--output")
+        .arg("TARGET")
         .arg("--noheadings")
         .status()
     {
