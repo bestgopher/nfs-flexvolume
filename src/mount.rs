@@ -1,5 +1,5 @@
 use std::fs;
-use std::process::{Command};
+use std::process::Command;
 
 use serde::Deserialize;
 use crate::utils::is_mounted;
